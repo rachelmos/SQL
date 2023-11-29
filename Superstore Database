@@ -1,0 +1,20 @@
+#Used SELECT statement to gather prices from superstore database
+SELECT price
+FROM superstore;
+
+#Sum price from superstore database and listed item name with price
+SELECT SUM(price), item_name
+FROM superstore
+GROUP BY item_name;
+
+#Took average price from superstore database and listed average price by item name
+SELECT AVG(price), item_name
+FROM superstore
+GROUP BY item_name;
+
+#Kitchen Supplies listed by category by price in descending order
+SELECT price, item_name
+FROM superstore
+WHERE category='Kitchen Supplies'
+GROUP BY item_name 
+ORDER BY price desc
